@@ -18,6 +18,17 @@ Console.WriteLine("Listening..");
 var handler = await socket.AcceptAsync();
 while (true)
 {
+    // allokerar en array men ger den ingen data
+    var buffer = new byte[2048];
+
+    // när den får data så fyller den vår buffer array med detta, och det är bara det som ligger i 
+    // length recieved som är data
+    var lengthRecieved = await handler.ReceiveAsync(buffer, SocketFlags.None);
+    
+    var data = buffer.Take(lengthRecieved).ToArray();
+
+    Console.WriteLine($"Data = {string.Join(", ", data)}");
+
 
 }
 
