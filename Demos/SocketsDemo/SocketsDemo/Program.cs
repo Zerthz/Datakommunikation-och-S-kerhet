@@ -26,8 +26,10 @@ while (true)
     var lengthRecieved = await handler.ReceiveAsync(buffer, SocketFlags.None);
     
     var data = buffer.Take(lengthRecieved).ToArray();
+    var content = System.Text.Encoding.UTF8.GetString(data);
 
-    Console.WriteLine($"Data = {string.Join(", ", data)}");
+    Console.WriteLine($"Data = {string.Join(", ", content)}");
+   
 
 
 }

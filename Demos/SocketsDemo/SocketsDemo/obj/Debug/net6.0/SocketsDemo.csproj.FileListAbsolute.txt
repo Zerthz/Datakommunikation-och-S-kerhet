@@ -13,3 +13,18 @@ G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och s�
 G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.pdb
 G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.genruntimeconfig.cache
 G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\ref\SocketsDemo.dll
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\bin\Debug\net6.0\SocketsDemo.exe
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\bin\Debug\net6.0\SocketsDemo.deps.json
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\bin\Debug\net6.0\SocketsDemo.runtimeconfig.json
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\bin\Debug\net6.0\SocketsDemo.dll
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\bin\Debug\net6.0\SocketsDemo.pdb
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.csproj.AssemblyReference.cache
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.AssemblyInfoInputs.cache
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.AssemblyInfo.cs
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.csproj.CoreCompileInputs.cache
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.dll
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\refint\SocketsDemo.dll
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.pdb
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.genruntimeconfig.cache
+C:\Users\felix\Datakommunikation-och-S-kerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\ref\SocketsDemo.dll
