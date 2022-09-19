@@ -1,0 +1,15 @@
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\bin\Debug\net6.0\SocketsDemo.exe
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\bin\Debug\net6.0\SocketsDemo.deps.json
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\bin\Debug\net6.0\SocketsDemo.runtimeconfig.json
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\bin\Debug\net6.0\SocketsDemo.dll
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\bin\Debug\net6.0\SocketsDemo.pdb
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.csproj.AssemblyReference.cache
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.GeneratedMSBuildEditorConfig.editorconfig
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.AssemblyInfoInputs.cache
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.AssemblyInfo.cs
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.csproj.CoreCompileInputs.cache
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.dll
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\refint\SocketsDemo.dll
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.pdb
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\SocketsDemo.genruntimeconfig.cache
+G:\Other computers\My Computer\SharedWithDrive\YH\År 2\Datakommunikation och säkerhet\Demos\SocketsDemo\SocketsDemo\obj\Debug\net6.0\ref\SocketsDemo.dll
