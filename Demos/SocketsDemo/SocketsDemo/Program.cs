@@ -25,6 +25,7 @@ while (true)
     // length recieved som är data
     var lengthRecieved = await handler.ReceiveAsync(buffer, SocketFlags.None);
     
+
     var data = buffer.Take(lengthRecieved).ToArray();
     var content = System.Text.Encoding.UTF8.GetString(data);
 
