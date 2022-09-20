@@ -18,4 +18,12 @@ await client.SendAsync
     new IPEndPoint(IPAddress.Loopback, 15006),CancellationToken.None);
 
 Console.WriteLine($"Sending {message} to port 15006");
+
+var result = await client.ReceiveAsync();
+Console.WriteLine(
+    $"Recieved message " +
+    $"\"{string.Join(",", Encoding.UTF8.GetString(result.Buffer))}\"" +
+    $" from " +
+    $"{result.RemoteEndPoint.Port}");
+
 await client.ReceiveAsync();

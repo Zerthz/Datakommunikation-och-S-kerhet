@@ -10,12 +10,16 @@ using System.Text;
 var endpoint = new IPEndPoint(IPAddress.Loopback, 15006);
 using var client = new UdpClient(endpoint);
 
-    Console.WriteLine($"Listening on port: {endpoint.Port}..");
+Console.WriteLine($"Listening on port: {endpoint.Port}..");
 
-    var result = await client.ReceiveAsync();
-    Console.WriteLine(
-        $"Recieved message " +
-        $"\"{string.Join(",", Encoding.UTF8.GetString(result.Buffer))}\"" +
-        $" from " +
-        $"{result.RemoteEndPoint.Port}");
-   
+var result = await client.ReceiveAsync();
+Console.WriteLine(
+    $"Recieved message " +
+    $"\"{string.Join(",", Encoding.UTF8.GetString(result.Buffer))}\"" +
+    $" from " +
+    $"{result.RemoteEndPoint.Port}");
+
+var message = "Thanks for your letter, reading now";
+await client.SendAsync(Encoding.UTF8.GetBytes(message),
+    result.RemoteEndPoint);
+await client.ReceiveAsync();    
