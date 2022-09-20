@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPCReplyEcho.Client", "TCPCReplyEcho\TCPCReplyEcho.Client.csproj", "{45320F3B-8821-4C4D-8B99-2B84DFFF687C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPReplyEcho.Server", "TCPReplyEcho.Server\TCPReplyEcho.Server.csproj", "{18AADC52-ECB4-48DF-9406-4A8CA1CE9235}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45320F3B-8821-4C4D-8B99-2B84DFFF687C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45320F3B-8821-4C4D-8B99-2B84DFFF687C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45320F3B-8821-4C4D-8B99-2B84DFFF687C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45320F3B-8821-4C4D-8B99-2B84DFFF687C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18AADC52-ECB4-48DF-9406-4A8CA1CE9235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18AADC52-ECB4-48DF-9406-4A8CA1CE9235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18AADC52-ECB4-48DF-9406-4A8CA1CE9235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18AADC52-ECB4-48DF-9406-4A8CA1CE9235}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2ED04764-00C1-42E6-A1F4-F490AAFEA17E}
+	EndGlobalSection
+EndGlobal
