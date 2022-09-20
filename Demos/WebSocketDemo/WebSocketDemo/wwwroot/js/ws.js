@@ -9,3 +9,5 @@ socket.onopen = e => {
         socket.send(`Hej från ${clientId}`);
     }, 1000)
 };
+
+// socket.onmessage

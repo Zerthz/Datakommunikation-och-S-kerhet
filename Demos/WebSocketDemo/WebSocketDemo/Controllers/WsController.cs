@@ -39,12 +39,16 @@ namespace WebSocketDemo.Controllers
                 var s = Encoding.UTF8.GetString(buffer, 0, content.Count);
                 _logger.LogInformation(s);
 
+                // för att skicka till clienten också
+                // webSocket.SendAsync();
             }
 
             await webSocket.CloseAsync(
                     webSocket.CloseStatus.Value,
                 webSocket.CloseStatusDescription,
                 CancellationToken.None);
+
+
         }
     }
 }
