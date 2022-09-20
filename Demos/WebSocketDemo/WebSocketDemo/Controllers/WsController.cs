@@ -31,6 +31,11 @@ namespace WebSocketDemo.Controllers
 
         private async Task Reader(WebSocket webSocket)
         {
+            // för att skicka till clienten också
+            // webSocket.SendAsync();
+            var bytes = Encoding.UTF8.GetBytes("Ready to recieve!");
+            await webSocket.SendAsync(bytes, WebSocketMessageType.Text, WebSocketMessageFlags.EndOfMessage, CancellationToken.None);
+           
             while (!webSocket.CloseStatus.HasValue)
             {
                 var buffer = new byte[2048];
@@ -39,9 +44,10 @@ namespace WebSocketDemo.Controllers
                 var s = Encoding.UTF8.GetString(buffer, 0, content.Count);
                 _logger.LogInformation(s);
 
-                // för att skicka till clienten också
-                // webSocket.SendAsync();
+              
             }
+
+           
 
             await webSocket.CloseAsync(
                     webSocket.CloseStatus.Value,
