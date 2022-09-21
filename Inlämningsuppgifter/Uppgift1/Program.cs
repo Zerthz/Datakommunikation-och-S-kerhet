@@ -23,7 +23,9 @@ while (true)
     var lengthRecieved = await handler.ReceiveAsync(buffer, SocketFlags.None);
     
     var data = buffer.Take(lengthRecieved).ToArray();
-    var responseBytes = Encoding.UTF8.GetString(data);
+
+    var encodingNoBom = new UTF8Encoding(false);
+    var responseBytes = encodingNoBom.GetString(data);
     Console.WriteLine(responseBytes);
     if(responseBytes != "")
     {

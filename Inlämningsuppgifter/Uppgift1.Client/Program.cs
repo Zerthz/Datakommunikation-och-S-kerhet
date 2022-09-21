@@ -9,18 +9,17 @@ await tcpClient.ConnectAsync("localhost", 69);
 
 using var stream = tcpClient.GetStream();
 
-//var reader = new StreamReader(stream, Encoding.UTF8);
-//var writer = new StreamWriter(stream, Encoding.UTF8);
+var reader = new StreamReader(stream, new UTF8Encoding(false));
+var writer = new StreamWriter(stream, new UTF8Encoding(false));
 
 
 var felixObj = new DataClass { Name = "Felix", Age = 27 };
 var jsonFelix = JsonSerializer.Serialize(felixObj);
-var jsonFelixBytes = Encoding.UTF8.GetBytes(jsonFelix);
-await stream.WriteAsync(jsonFelixBytes,CancellationToken.None);
+//var jsonFelixBytes = Encoding.UTF8.GetBytes(jsonFelix);
+//await stream.WriteAsync(jsonFelixBytes,CancellationToken.None);
 
-//await writer.WriteAsync(jsonFelix);
-//await writer.FlushAsync();
-
+await writer.WriteAsync(jsonFelix);
+await writer.FlushAsync();
 
 
 while(true)
