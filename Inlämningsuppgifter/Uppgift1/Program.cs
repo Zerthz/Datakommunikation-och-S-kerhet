@@ -26,20 +26,18 @@ while (true)
 
     var encodingNoBom = new UTF8Encoding(false);
     var responseBytes = encodingNoBom.GetString(data);
-    Console.WriteLine(responseBytes);
-    if(responseBytes != "")
-    {
-        var responseObj = JsonSerializer.Deserialize<DataClass>(responseBytes);
-        responseObj!.Message = "Adding a message from server";
-        Console.WriteLine($"Recieved message from client:" +
-                                $"\n    Name: {responseObj.Name}" +
-                                $"\n    Age: {responseObj.Age}");
+    var responseObj = JsonSerializer.Deserialize<DataClass>(responseBytes);
 
-        var jsonResponse = JsonSerializer.Serialize(responseObj);
-        var sendBytes = Encoding.UTF8.GetBytes(jsonResponse);
-        await handler.SendAsync(sendBytes, SocketFlags.None);
+    responseObj!.Message = "Adding a message from server";
+    Console.WriteLine($"Recieved message from client:" +
+                            $"\n    Name: {responseObj.Name}" +
+                            $"\n    Age: {responseObj.Age}");
 
-    }
+    var jsonResponse = JsonSerializer.Serialize(responseObj);
+    var sendBytes = Encoding.UTF8.GetBytes(jsonResponse);
+    await handler.SendAsync(sendBytes, SocketFlags.None);
+
+    
 
    
 }

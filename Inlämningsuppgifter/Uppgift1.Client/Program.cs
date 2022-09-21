@@ -15,8 +15,7 @@ var writer = new StreamWriter(stream, new UTF8Encoding(false));
 
 var felixObj = new DataClass { Name = "Felix", Age = 27 };
 var jsonFelix = JsonSerializer.Serialize(felixObj);
-//var jsonFelixBytes = Encoding.UTF8.GetBytes(jsonFelix);
-//await stream.WriteAsync(jsonFelixBytes,CancellationToken.None);
+
 
 await writer.WriteAsync(jsonFelix);
 await writer.FlushAsync();
@@ -24,18 +23,20 @@ await writer.FlushAsync();
 
 while(true)
 {
-    byte[] buffer = new byte[1024];
-    int bytesRecieved = stream.Read(buffer);
-    string jsonData = Encoding.UTF8.GetString(buffer.AsSpan(0, bytesRecieved));
-    var deserData = JsonSerializer.Deserialize<DataClass>(jsonData);
+    char[] buffer = new char[2048];
+    
+    var recievedLength = await reader.ReadAsync(buffer, CancellationToken.None);
+    var jsonData = string.Join("", buffer.Take(recievedLength));
 
-    if (deserData == null)
+    var msg = JsonSerializer.Deserialize<DataClass>(jsonData);
+
+    if (msg == null)
         throw new NullReferenceException();
 
     Console.WriteLine($"Message recieved from server:" +
-                            $"\n    Name: {deserData.Name}" +
-                            $"\n    Age: {deserData.Age}" +
-                            $"\n    Message: {deserData.Message}");
+                            $"\n    Name: {msg.Name}" +
+                            $"\n    Age: {msg.Age}" +
+                            $"\n    Message: {msg.Message}");
 
 
 }
