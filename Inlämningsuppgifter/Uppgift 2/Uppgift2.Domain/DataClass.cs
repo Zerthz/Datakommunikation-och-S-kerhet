@@ -8,7 +8,7 @@ namespace Uppgift2.Domain
 {
     public class DataClass
     {
-        public int NoTimesRead { get; set; }
+        public int NoTimesRead { get; set; } = 1;
         public string InitialMessage { get; init; } = string.Empty;
         public string? ResponseMessage { get; set; }
     }
