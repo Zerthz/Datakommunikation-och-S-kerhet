@@ -54,7 +54,9 @@ namespace Uppgift3.Controllers
                     Random r = new Random();
                     var response = new ResponseModel { Id = r.NextSingle(), 
                         RecievedId = msg.Id, 
-                        Message = $"I reached {msg.Counter} messages from you, that's enough son" };
+                        Message = $"I reached {msg.Counter} messages from you, that's enough son",
+                        IsClosing = true
+                    };
 
                     var jsonResponse = JsonSerializer.Serialize(response);
                     var responseBytes = Encoding.UTF8.GetBytes(jsonResponse);
