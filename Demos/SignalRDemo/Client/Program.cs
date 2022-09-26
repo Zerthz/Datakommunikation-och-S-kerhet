@@ -11,4 +11,27 @@ Console.ReadLine();
 
 await connection.StartAsync();
 
+//connection.Closed += async reason =>
+//{
+//    Console.WriteLine(reason + " hände");
+//};
+//connection.Reconnecting += async status =>
+//{
+//    Console.WriteLine(status);
+//};
+//connection.Reconnected += async status =>
+//{
+//    Console.WriteLine("");
+//};
+
+
+
 Console.WriteLine("Connected!");
+
+// invoke måste man köra om metoden returenrar ngt
+// om metoden inte returnerar ngt kan man köra sendasync
+// query v command
+var result = await connection.InvokeAsync<int>("Multiply", 2, 3);
+Console.WriteLine("2 * 3 = " + result);
+
+Console.ReadLine();
