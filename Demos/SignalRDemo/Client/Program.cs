@@ -44,3 +44,4 @@ connection.On<string>("Log", message =>
 await connection.SendAsync("SelfLog", "Detta ska loggas ut");
 
 Console.ReadLine();
+

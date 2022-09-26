@@ -13,7 +13,7 @@ namespace Server.Hubs
         public void SelfLog(string message)
         {
             // Hubben invokear en metod som heter log som finns i clientens context
-            base.Clients.Caller.SendAsync("Log", message);
+            Clients.All.SendAsync("Log", message);
         }
     }
 }
