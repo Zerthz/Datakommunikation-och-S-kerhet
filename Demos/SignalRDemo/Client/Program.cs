@@ -34,4 +34,13 @@ Console.WriteLine("Connected!");
 var result = await connection.InvokeAsync<int>("Multiply", 2, 3);
 Console.WriteLine("2 * 3 = " + result);
 
+
+// Clientens "Log" metod som kallas från
+connection.On<string>("Log", message =>
+{
+    Console.WriteLine($"Logger -> {message}");
+});
+
+await connection.SendAsync("SelfLog", "Detta ska loggas ut");
+
 Console.ReadLine();
