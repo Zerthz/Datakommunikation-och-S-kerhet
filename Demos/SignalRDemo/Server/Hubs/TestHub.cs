@@ -1,15 +1,12 @@
 ﻿using Microsoft.AspNetCore.SignalR;
+using Server.Models;
 
 namespace Server.Hubs
 {
-    public class ComplexObject
-    {
-        public string Name { get; set; }
-        public int Age{ get; set; }
-    }
     public class TestHub : Hub
     {
         private readonly ILogger<TestHub> _logger;
+        private string _group = "MyGroup";
 
         public TestHub(ILogger<TestHub> logger)
         {
@@ -33,9 +30,18 @@ namespace Server.Hubs
         }
 
         // Todo SKAPA EN METOD FÖR ATT LÄGGA TILL I GRUPP
+        public async Task JoinGroup()
+        {
+            await Groups.AddToGroupAsync(Context.ConnectionId, _group);
+
+        }
+
 
         // Todo SKAPA EN METOD FÖR ATT SKICKA TILL GRUPP
-
+        public async Task MessageGroup(string message)
+        {
+            await Clients.Group(_group).SendAsync("Send", message);
+        }
 
         public override Task OnConnectedAsync()
         {

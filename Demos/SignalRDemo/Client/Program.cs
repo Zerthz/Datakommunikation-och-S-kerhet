@@ -35,13 +35,19 @@ var result = await connection.InvokeAsync<int>("Multiply", 2, 3);
 Console.WriteLine("2 * 3 = " + result);
 
 
+connection.On<string>("Send", message =>
+{
+    Console.WriteLine(message);
+});
 // Clientens "Log" metod som kallas från
 connection.On<string>("Log", message =>
 {
     Console.WriteLine($"Logger -> {message}");
 });
 
-await connection.SendAsync("SelfLog", "Detta ska loggas ut");
 
+await connection.SendAsync("SelfLog", "Detta ska loggas ut");
+await connection.SendAsync("JoinGroup");
+await connection.SendAsync("MessageGroup", "Hej");
 Console.ReadLine();
 
