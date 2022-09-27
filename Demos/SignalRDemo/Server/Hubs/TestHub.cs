@@ -18,7 +18,7 @@ namespace Server.Hubs
         public async Task SelfLog(string message)
         {
             // Bara för att vi ska ha lite delay så att saker händer.
-            await Task.Delay(1000000);
+            await Task.Delay(250);
             // Hubben invokear en metod som heter log som finns i clientens context
             await Clients.All.SendAsync("Log", message);
         }

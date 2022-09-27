@@ -12,7 +12,7 @@ namespace Server.Filters
             _logger = logger;
         }
 
-        public ValueTask<object?> InvokeMethodAsync(
+        public async ValueTask<object?> InvokeMethodAsync(
             HubInvocationContext invocationContext,
             Func<HubInvocationContext, ValueTask<object?>> next)
         {
@@ -20,7 +20,7 @@ namespace Server.Filters
             stopwatch.Start();
 
 
-            var result = next(invocationContext);
+            var result = await next(invocationContext);
 
             stopwatch.Stop();
                 
