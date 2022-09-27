@@ -1,16 +1,21 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using Server.Models;
+using Server.State;
 
 namespace Server.Hubs
 {
     public class TestHub : Hub
     {
         private readonly ILogger<TestHub> _logger;
+        private readonly IAppState _appState;
         private string _group = "MyGroup";
 
-        public TestHub(ILogger<TestHub> logger)
+        // hubben är transient men appstate är singleton, så data där
+        // sparas så länge som servern lever
+        public TestHub(ILogger<TestHub> logger, IAppState appState)
         {
             _logger = logger;
+            _appState = appState;
         }
 
         public Task<int> Multiply(int a, int b)
@@ -53,5 +58,13 @@ namespace Server.Hubs
             return base.OnConnectedAsync();
         }
 
+        public void Store(string value)
+        {
+            _appState.Store(Context.ConnectionId, value);
+        }
+        public string GetStoredValue()
+        {
+            return _appState.Get(Context.ConnectionId);
+        }
     }
 }

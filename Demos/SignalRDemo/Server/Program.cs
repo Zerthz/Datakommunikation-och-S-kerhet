@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.SignalR;
 using Server.Filters;
 using Server.Hubs;
 using Server.Services;
+using Server.State;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,8 @@ builder.Services.AddSignalR(option =>
 builder.Services.AddCors();
 builder.Services.AddHostedService<TimerBackgroundService>();
 
+// Om man har databas ist så har man inte singleton utan typ scoped eller transient.
+builder.Services.AddSingleton<IAppState, AppState>();
 
 var app = builder.Build();
 

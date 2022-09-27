@@ -20,6 +20,10 @@ connection.start()
 
         console.log("RESPONSE ", response);
 
+        await connection.send("Store", "ett-värde");
+        const storedValue = await connection.invoke("GetStoredValue");
+
+        console.log(storedValue);
 
     })
     .catch(e => {
