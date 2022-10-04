@@ -8,7 +8,7 @@ builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("OnlyAllowFelix", builder =>
     {
-        builder.AddRequirements(new OnlyAllowNameRequirement("Felix"));
+        builder.AddRequirements(new OnlyAllowNameRequirement("felix"));
     });
 });
 builder.Services.AddAuthentication("Bearer").AddJwtBearer();

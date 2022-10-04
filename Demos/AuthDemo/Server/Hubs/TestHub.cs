@@ -6,7 +6,7 @@ namespace Server.Hubs
     [Authorize]
     public class TestHub : Hub
     {
-        [Authorize("OnlyAllowName")]
+        [Authorize("OnlyAllowFelix")]
         public int Restricted()
         {
             return 42;
