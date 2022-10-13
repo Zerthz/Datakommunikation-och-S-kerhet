@@ -8,6 +8,7 @@ using Uppgift3.Models;
 namespace Uppgift3.Controllers
 {
    
+    // det överliggande är exakt som i vår demo
     public class WsController : ControllerBase
     {
         private readonly ILogger<WsController> _logger;
@@ -33,22 +34,23 @@ namespace Uppgift3.Controllers
 
         private async Task Reader(WebSocket webSocket)
         {
-            var bytes = Encoding.UTF8.GetBytes("Ready to recieve!");
-            string closereason = null;
+            string? closereason = null;
             while (!webSocket.CloseStatus.HasValue)
             {
                 var buffer = new byte[2048];
                 var content = await webSocket.ReceiveAsync(buffer, CancellationToken.None);
 
+                // deserialisera strängen till ett objekt
                 var msgJson = Encoding.UTF8.GetString(buffer, 0, content.Count);
                 var msg = JsonSerializer.Deserialize<MessageModel>(msgJson);
+                // säkerställ att vi inte har null msg
                 if(msg == null)
                 {
                     _logger.LogError(nameof(msg) + "is null");
                     break;
                 }
                 
-                
+                // vi tar emot max 5 meddelanden sen stänger vi ned connectionen.
                 if(5 <= msg.Counter)
                 {
                     Random r = new Random();
@@ -58,23 +60,28 @@ namespace Uppgift3.Controllers
                         IsClosing = true
                     };
 
+                    // serialisera respons objektet
                     var jsonResponse = JsonSerializer.Serialize(response);
                     var responseBytes = Encoding.UTF8.GetBytes(jsonResponse);
-
+                    
+                    // skicka vår respons
                     await webSocket.SendAsync(
                         responseBytes,
                         WebSocketMessageType.Text,
                         WebSocketMessageFlags.EndOfMessage,
                         CancellationToken.None);
 
+                    // stäng connection ordentligt
                     _logger.LogInformation($"Reached {msg.Counter} recieved messages, will close the websocket now");
                     closereason = $"Reached {msg.Counter} recieved messages";
                     break;
                 }
+                // skriv ut meddelandet till konsollen
                 _logger.LogInformation(msg.Message + " " + msg.Id + " " + msg.Counter);
 
             }
 
+            // stäng connection
             await webSocket.CloseAsync(
                      WebSocketCloseStatus.NormalClosure, 
                 closereason ?? "Closing", 
