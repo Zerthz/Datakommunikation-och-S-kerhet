@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.Json;
 using Uppgift2.Domain;
 
+// skapa client
 var endpoint = new IPEndPoint(IPAddress.Loopback, 15005);
 using var client = new UdpClient(endpoint);
 
